@@ -58,6 +58,8 @@
         .highlight-ai {
             color: #ffffff;
             opacity: 1;
+            font-weight: 400;
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
         }
         
         .reduced-opacity {
@@ -65,13 +67,16 @@
         }
         
         .email {
-            font-size: 0.6rem;
-            opacity: 0.5;
+            font-size: 0.75rem;
             letter-spacing: 0.05rem;
             margin-top: 0.3rem;
             color: #d0d0d0;
             text-decoration: none;
             transition: all 0.3s ease;
+        }
+        
+        .email-text {
+            opacity: 0.5;
         }
         
         .email:hover {
@@ -91,7 +96,7 @@
                 letter-spacing: 0.2rem;
             }
             .email {
-                font-size: 0.55rem;
+                font-size: 0.7rem;
             }
         }
         
@@ -124,7 +129,7 @@
         <!-- Add your image here like this:
         <img src="images/eye-logo.png" alt="An eye for AI" style="width: 100px; margin: 20px 0;">
         -->
-        <a href="mailto:bm@loudfair.com?subject=Hello%20from%20loudfair.com" class="email">bm@loudf<span class="highlight-ai">ai</span>r.com</a>
+        <a href="mailto:bm@loudfair.com?subject=Hello%20from%20loudfair.com" class="email"><span class="email-text">bm@loudf</span><span class="highlight-ai">ai</span><span class="email-text">r.com</span></a>
     </div>
 </body>
 </html>

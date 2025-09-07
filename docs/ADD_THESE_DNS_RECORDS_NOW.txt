@@ -1,0 +1,54 @@
+URGENT: ADD THESE DNS RECORDS IN GODADDY NOW
+=============================================
+
+Go to: https://dcc.godaddy.com/control/loudfair.com/dns
+
+ADD THESE 4 A RECORDS FOR loudfair.com:
+----------------------------------------
+
+Record 1:
+Type: A
+Name: @
+Value: 185.199.108.153
+TTL: 600 seconds
+
+Record 2:
+Type: A
+Name: @
+Value: 185.199.109.153
+TTL: 600 seconds
+
+Record 3:
+Type: A
+Name: @
+Value: 185.199.110.153
+TTL: 600 seconds
+
+Record 4:
+Type: A
+Name: @
+Value: 185.199.111.153
+TTL: 600 seconds
+
+UPDATE THE WWW CNAME RECORD:
+---------------------------
+Find the existing CNAME for www and EDIT it:
+
+Type: CNAME
+Name: www
+Value: nebslim.github.io
+TTL: 600 seconds
+
+(Currently it points to loudfair.com, change it to nebslim.github.io)
+
+AFTER ADDING THESE:
+-------------------
+1. Wait 5-10 minutes for DNS to propagate
+2. GitHub will automatically detect the domain
+3. GitHub will provision an SSL certificate
+4. Your site will be live at https://loudfair.com
+
+STATUS CHECK:
+-------------
+Your CNAME file has been added to GitHub ✓
+Just need the DNS records in GoDaddy now!

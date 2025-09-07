@@ -1,0 +1,66 @@
+🎉 YOUR LANDING PAGE IS LIVE!
+===============================
+
+✅ Website URL: https://nebslim.github.io/loudfair/
+✅ GitHub Repo: https://github.com/nebslim/loudfair
+
+The page shows:
+- "LOUD AND FAIR" centered on black background
+- "bm@loudfair.com" in tiny text below
+- Responsive design for mobile and desktop
+- Fade-in animation
+
+NEXT STEPS: Connect loudfair.com to GitHub Pages
+-------------------------------------------------
+
+1. IN GITHUB (5 minutes):
+   - Go to: https://github.com/nebslim/loudfair/settings/pages
+   - Under "Custom domain", enter: loudfair.com
+   - Click Save
+   - GitHub will create a CNAME file automatically
+
+2. IN GODADDY DNS (Add these records):
+   
+   For apex domain (loudfair.com):
+   Type: A
+   Name: @
+   Value: 185.199.108.153
+   TTL: 1 Hour
+
+   Type: A
+   Name: @
+   Value: 185.199.109.153
+   TTL: 1 Hour
+
+   Type: A
+   Name: @
+   Value: 185.199.110.153
+   TTL: 1 Hour
+
+   Type: A
+   Name: @
+   Value: 185.199.111.153
+   TTL: 1 Hour
+
+   For www subdomain:
+   Type: CNAME
+   Name: www
+   Value: nebslim.github.io
+   TTL: 1 Hour
+
+3. WAIT for DNS propagation (15-60 minutes)
+
+4. Your site will be live at:
+   - https://loudfair.com
+   - https://www.loudfair.com
+
+GitHub automatically provides HTTPS certificates!
+
+TO UPDATE THE SITE:
+-------------------
+1. Edit index.html
+2. git add index.html
+3. git commit -m "your message"
+4. git push
+
+Changes appear within 1-2 minutes!

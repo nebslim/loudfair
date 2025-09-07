@@ -1,0 +1,38 @@
+PROTON MAIL DNS SETUP CHECKLIST FOR LOUDFAIR.COM
+================================================
+
+□ Step 1: Add Verification Record
+  - Log into GoDaddy
+  - Go to DNS management for loudfair.com
+  - Add TXT record:
+    Name: @
+    Value: protonmail-verification=6d50e400e1ecc8b9c648c50477e351385a242bb1
+  - Save
+
+□ Step 2: Verify in Proton Mail
+  - Click Verify button in Proton Mail
+  - Wait 5-15 minutes if needed
+
+□ Step 3: Add MX Records (delete any existing MX records first!)
+  - MX Record 1: @ → mail.protonmail.ch (Priority: 10)
+  - MX Record 2: @ → mailsec.protonmail.ch (Priority: 20)
+
+□ Step 4: Add SPF Record
+  - TXT Record: @ → v=spf1 include:_spf.protonmail.ch ~all
+
+□ Step 5: Add DKIM Records (get values from Proton Mail)
+  - CNAME: protonmail._domainkey → [Proton will provide]
+  - CNAME: protonmail2._domainkey → [Proton will provide]
+  - CNAME: protonmail3._domainkey → [Proton will provide]
+
+□ Step 6: Update DMARC Record
+  - Edit existing _dmarc TXT record
+  - Change email to your Proton Mail address
+
+□ Step 7: Create Email Addresses in Proton Mail
+  - Go to Settings → Addresses
+  - Add your desired email addresses
+
+VERIFICATION TOOLS:
+- Check DNS: https://mxtoolbox.com/SuperTool.aspx
+- DNS Propagation: https://dnschecker.org

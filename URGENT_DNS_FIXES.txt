@@ -1,0 +1,49 @@
+URGENT DNS CHANGES TO FIX GMAIL SPAM - DO THESE NOW!
+====================================================
+
+Go to: https://dcc.godaddy.com/control/loudfair.com/dns
+
+CHANGE #1: FIX DMARC (THIS IS CAUSING YOUR SPAM ISSUE!)
+---------------------------------------------------------
+1. Find this record:
+   Type: TXT
+   Name: _dmarc
+   Current Value: v=DMARC1; p=quarantine; rua=mailto:postmaster@loudfair.com; pct=100; sp=none
+
+2. Click EDIT
+
+3. Change Value to:
+   v=DMARC1; p=none; rua=mailto:postmaster@loudfair.com
+
+4. Save
+
+
+CHANGE #2: OPTIMIZE SPF
+-----------------------
+1. Find this record:
+   Type: TXT
+   Name: @
+   Value: v=spf1 include:_spf.protonmail.ch mx ~all
+
+2. Click EDIT
+
+3. Change Value to:
+   v=spf1 include:_spf.protonmail.ch -all
+   (Remove the "mx" and change ~all to -all)
+
+4. Save
+
+
+WAIT 15 MINUTES, THEN TEST
+---------------------------
+Send a REAL email (not "test") with proper content:
+Subject: "Meeting notes from today"
+Body: "Hi, Thanks for the productive discussion today..."
+
+IT SHOULD GO TO INBOX!
+
+
+OPTIONAL: Contact GoDaddy Support
+---------------------------------
+Tell them: "I have 11 domains and need API access enabled for DNS management"
+They can manually activate it for your account.
